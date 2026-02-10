@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Game full screen */
+#game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Canvas full màn hình */
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #444;
+}
+
+/* ================= CAMERA VIEW ================= */
+/* Camera container */
+#camera-box {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 40px;
+  overflow: hidden;
+
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+
+  z-index: 10;
+}
+
+/* Camera video */
+#video {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+/* Overlay canvas */
+#cameraCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  pointer-events: none;
+}
+
+
+/* HUD */
+#hud {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 20;
+  color: #00ff00;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Start button */
+#startBtn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 18px 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 40px;
+  background: red;
+  color: white;
+  z-index: 30;
+  cursor: pointer;
+}
